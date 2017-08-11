@@ -6,12 +6,16 @@ execute:
 
 0. Loggin root
 
-'su' on debian or 'sudo su' on ubuntu
+  'su' on debian or 'sudo su' on ubuntu
 
-1. Write on the terminal
+1. Copy exec to /usr/bin/
 
-./bootusb /path/to/image.iso /dev/sdX
+  cp bootusb /usr/bin/bootusb
 
-2. Format the usb how FAT16 on '/dev/sdX1' in the process
+2. Write on the terminal
 
-3. Be Happy :)
+  bootusb /path/to/image.iso /dev/sdX
+
+3. Format the usb how FAT16 on '/dev/sdX1' in the process
+
+4. Be Happy :)
