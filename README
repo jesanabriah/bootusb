@@ -1,0 +1,17 @@
+compile:
+
+g++ bootusb.cpp -o bootusb
+
+execute:
+
+0. Loggin root
+
+'su' on debian or 'sudo su' on ubuntu
+
+1. Write on the terminal
+
+./bootusb /path/to/image.iso /dev/sdX
+
+2. Format the usb how FAT16 on '/dev/sdX1' in the process
+
+3. Be Happy :)
