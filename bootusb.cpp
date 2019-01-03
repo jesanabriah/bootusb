@@ -1,6 +1,6 @@
 /*
 *
-* Crea una USB booteable con la imagen de disco especificada
+* Create a bootable Debian Linux USB with the specified disk image
 *
 * This program is free software: you can redistribute it and/or modify
 *   it under the terms of the GNU General Public License as published by
@@ -30,16 +30,16 @@ int main(int argc, char **argv){
 
 
 	if(argc != 3){
-		std::cout << "Número de argumentos incorrecto" << std::endl;
+		std::cout << "Incorrect number of arguments" << std::endl;
 		std::cout << "example:\t'root@debian:~ bootusb /path/to/origen.iso /dev/sdX'" << std::endl;
 	}
 	else if(strncmp(argv[2], "/dev/sda", 8) == 0){
-		std::cout << "Este procedimiento, por cuestiones de seguridad, no se puede realizar en /dev/sda" << std::endl;
-		std::cout << "Intente mejor en un medio extraible /dev/sdX" << std::endl;
+		std::cout << "This procedure, for security reasons, can not be done in /dev/sda" << std::endl;
+		std::cout << "Try better in a removable medium /dev/sdX" << std::endl;
 	}
 	else{
 		make_bootusb(argv);
-		std::cout << "Ahora puede retirar la USB :)" << std::endl;
+		std::cout << "Now you can remove the USB :)" << std::endl;
 	}
 
 	return 0;
